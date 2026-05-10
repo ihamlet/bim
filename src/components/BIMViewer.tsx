@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useRef, useState, useCallback } from 'react';
-import Link from 'next/link';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { IFCLoader } from 'web-ifc-three';
@@ -334,15 +333,15 @@ export default function BIMViewer({ onModelLoaded }: BIMViewerProps) {
       {/* 工具栏 */}
       <div className="flex items-center justify-between px-6 py-4 bg-white/10 backdrop-blur-sm border-b border-gray-700">
         <div className="flex items-center gap-4">
-          <Link 
+          <a 
             href="/" 
-            className="p-2 hover:bg-white/10 rounded-lg transition-colors"
+            className="p-2 hover:bg-white/10 rounded-lg transition-colors cursor-pointer"
             title="返回首页"
           >
             <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>
-          </Link>
+          </a>
           
           <h1 className="text-xl font-bold text-white flex items-center gap-2">
             <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
